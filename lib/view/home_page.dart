@@ -49,3 +49,12 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () =>
                 context.read<CounterModel>().decrement(),
             tooltip: 'Decrement',
+             child: const Icon(Icons.remove),
+          ),
+          const SizedBox(width: 16),
+          FloatingActionButton(
+            heroTag: "increment",
+            onPressed: () =>
+                context.read<CounterModel>().increment(),
+            tooltip: 'Increment',
+            child: const Icon(Icons.add),
