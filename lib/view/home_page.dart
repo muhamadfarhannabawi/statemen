@@ -35,10 +35,27 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => context.read<CounterModel>().increment(),
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+
+      
+      floatingActionButton: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          FloatingActionButton(
+            heroTag: "decrement",
+            onPressed: () =>
+                context.read<CounterModel>().decrement(),
+            tooltip: 'Decrement',
+            child: const Icon(Icons.remove),
+          ),
+          const SizedBox(width: 12),
+          FloatingActionButton(
+            heroTag: "increment",
+            onPressed: () =>
+                context.read<CounterModel>().increment(),
+            tooltip: 'Increment',
+            child: const Icon(Icons.add),
+          ),
+        ],
       ),
     );
   }
