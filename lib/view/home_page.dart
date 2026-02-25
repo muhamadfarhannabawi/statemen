@@ -58,3 +58,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 context.read<CounterModel>().increment(),
             tooltip: 'Increment',
             child: const Icon(Icons.add),
+             ),
+        ],
+      ),
+    );
+  }
+}
