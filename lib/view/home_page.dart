@@ -44,3 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+           FloatingActionButton(
+            heroTag: "decrement",
+            onPressed: () =>
+                context.read<CounterModel>().decrement(),
+            tooltip: 'Decrement',
