@@ -36,3 +36,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+
+       // 🔥 Tambahan supaya tombol di tengah bawah
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+
+      floatingActionButton: Row(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
